@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>防止margin重疊塌陷</title>
+    <style>
+        p {
+            color: #f55;
+            background: #fcc;
+            width: 200px;
+            line-height: 100px;
+            text-align:center;
+            margin: 100px;
+        }
+        p1 {
+            color: #f55;
+            background: #fcc;
+            width: 200px;
+            line-height: 100px;
+            text-align:center;
+            margin: 100px;
+        }
+/*        在你的HTML代码中，你使用了两个自定义的元素 <p1> 和 <p>，并对它们应用了相同的CSS样式。
+           然而，你遇到的问题可能是由于浏览器默认的CSS规则和一些CSS选择器的特性导致的。
+
+       浏览器通常对标准HTML元素（如 <p>）有一些默认样式规则，但对于自定义元素（如 <p1>），
+        浏览器可能不会应用相同的默认样式。因此，自定义元素可能会受到不同的渲染规则。
+         为了确保自定义元素和标准元素都以相同的方式渲染，你可以使用通用的CSS选择器*/
+        .custom-p {
+            color: #f55;
+            background: #fcc;
+            width: 200px;
+            line-height: 100px;
+            text-align:center;
+            margin: 100px;
+        }
+        /*可以在p外面包裹一层容器，并触发这个容器生成一个BFC，那么两个p就不属于同一个BFC，则不会出现margin重叠*/
+        .wrap {
+            /*overflow 属性用于控制当内容溢出其容器时的表现方式。*/
+           // overflow: hidden; /*内容溢出容器边界时将被隐藏，不会显示在容器外部。*/
+            // overflow: visible; /*内容溢出容器边界时会显示在容器外部，可能会遮盖其他内容*/
+            overflow: scroll; /*如果内容溢出容器边界，会显示滚动条以便浏览溢出的内容。*/
+            //overflow: auto; /*如果内容溢出容器边界，会根据需要显示滚动条，只有在需要滚动时才显示。*/
+
+        }
+    </style>
+</head>
+<body>
+    <p class="custom-p">Haha</p >
+    <p class = "custom-p">miaoqing</p>
+    <p>Hehe</p >
+
+    <p>haha1</p>
+    <p class = "custom-p">miaoqing</p>
+
+    <div class="wrap">
+        <p>hehe1</p>
+    </div>
+</body>
+</html>
