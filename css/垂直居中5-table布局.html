@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中5-table</title>
+    <style>
+        /*设置父元素为display:table-cell，
+        子元素设置 display: inline-block。
+        利用vertical和text-align可以让所有的行
+        内块级元素水平垂直居中*/
+        .father {
+            display: table-cell;
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .son {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">垂直居中用table</div>
+    </div>
+
+
+</body>
+</html>

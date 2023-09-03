@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--绝对定位+transform-->
+    <title>垂直居中1</title>
+    <style>
+        .father {
+            position: relative;
+            color: #ffcccc;
+            width: 200px; /* 设置父元素的宽度 */
+            height: 200px; /* 设置父元素的高度 */
+        }
+        .son {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            color: #ff6666;
+            transform: translate(-80%, -50%);
+            height: 100px;
+            width: 100px;
+            background: #ffcccc;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    111
+    <div class="son">
+        垂直居中 transform: translate实现
+    </div>
+</div>
+
+</body>
+</html>

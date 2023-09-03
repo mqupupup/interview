@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除内部浮动</title>
+    <style>
+        .par {
+            border: 5px solid #ff5555;
+            width: 300px;
+            /*而BFC在计算高度时，浮动元素也会参与，所以我们可以触发.par元素生成BFC，则内部浮动元素计算高度时候也会计算*/
+            overflow: hidden;
+        }
+        .child {
+            border: 5px solid #ffcccc;
+            width: 100px;
+            height: 200px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="par">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+
+</body>
+</html>
