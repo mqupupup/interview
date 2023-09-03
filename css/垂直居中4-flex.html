@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中4-flex或者grid</title>
+    <style>
+        .father {
+           /* CSS的display属性定义了元素在页面上的布局方式。以下是一些常见的display属性的值：
+
+            block：将元素显示为块级元素，如div、p、header等，通常用于文档流中创建块级结构。
+            inline：将元素显示为行内元素，如span、a、img等，通常用于在文本中创建内联元素。
+            inline-block：将元素显示为内联块级元素，可以设置宽高，也可以与其他元素在同一行内排列。
+            flex：将元素显示为弹性布局的容器，通常用于创建灵活的布局。只能在行内元素中使用，不能用于块级元素。另外，在使用Flex布局时，需要设置容器的宽度或高度，
+            以保证Flex容器能够正确地显示出来。
+            grid：将元素显示为网格布局的容器，通常用于创建二维的布局。
+            table、inline-table：用于创建HTML表格。
+            list-item：将元素显示为列表项，通常用于创建有序或无序的列表。*/
+            /*display: flex;*/
+            display: grid;
+            /*justify-content是CSS中的一个属性，用于在Flexbox或Grid布局中，决定在主轴方向上如何对齐容器中的项目。这包括：
+                flex-start：起始位置均在上部。
+                flex-end：终止位置均在下部。
+                center：居中，子元素位于弹性容器的中心。
+                space-between：两端对齐，子元素和子元素之间有空白空间，
+                项目之间的间隔都相等。
+                space-around：每个项目的左右撑开距离相等，子元素之前、之间、之后都留有空白空间，
+                且空间自行分配，项目之间的间隔比项目与边框的间隔大一倍。
+                space-evenly：弹性项目平均分布在该行上，相邻项目的间隔，项目与容器之间空间相等。
+                注意，这些值适用于Flexbox和Grid布局，因为它们共享同一套对齐规则。对于Grid布局，
+                这些规则主要应用于网格线和网格单元格的对齐。*/
+            justify-content: center;
+            /*
+                align-items是CSS中的一个属性，用于设置或检索弹性盒子元素在交叉轴（cross axis）上的对齐方式。
+                该属性的可选值包括：
+                stretch：默认值，如果弹性子元素没有高度或高度为auto，将占满整个容器的高度。
+                flex-start：子元素在交叉轴顶端对齐。
+                flex-end：子元素在交叉轴末端对齐。
+                center：子元素在交叉轴中间对齐。
+                baseline：子元素在第一行文字的基线对齐。
+                需要注意的是，这些值适用于Flexbox和Grid布局，
+                因为它们共享同一套对齐规则。对于Grid布局，这些规则主要应用于网格线和网格单元格的对齐。
+            */
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">垂直居中用flex</div>
+    </div>
+
+</body>
+</html>

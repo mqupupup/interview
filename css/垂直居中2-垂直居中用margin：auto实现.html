@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中2</title>
+    <style>
+        .father {
+            position: relative;
+            background: black;
+        }
+        .son {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0px;
+            /*利用绝对定位+margin:auto，子元素所有方向都为 0 ，
+            将 margin 设置为 auto ，
+            由于宽高固定，对应方向实现平分，该方法必须盒子有宽高*/
+            margin: auto;
+            height: 100px;
+            width: 100px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">垂直居中用margin：auto实现</div>
+    </div>
+
+</body>
+</html>
