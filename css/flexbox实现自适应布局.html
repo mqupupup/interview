@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flexbox布局</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .left {
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: 200px;
+            height: 100px;
+            background: #5daf34;
+        }
+
+        .right {
+            flex-grow: 1;
+            background: #ff6666;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">123</div>
+        <div class="right">456</div>
+    </div>
+
+</body>
+</html>

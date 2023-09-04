@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个很酷炫的动画</title>
+    <style>
+        /* 定义动画关键帧 */
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 应用动画到元素 */
+        .element {
+            animation-name: rotate; /* 指定动画名称 */
+            animation-duration: 3s; /* 动画持续时间 */
+            animation-timing-function: linear; /* 动画速度曲线 */
+            animation-delay: 0s; /* 动画延迟时间 */
+            animation-iteration-count: infinite; /* 动画重复次数，这里设置为无限循环 */
+            animation-direction: normal; /* 动画播放方向 */
+        }
+    </style>
+</head>
+<body>
+    <div class = "element">
+       这是一个很酷炫的动画
+    </div>
+
+</body>
+</html>

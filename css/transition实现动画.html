@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画举例</title>
+    <style>
+        .base {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            background-color: firebrick;
+            border-width: 5px;
+            border-style: solid;
+            border-color: orange;
+            transition-property: width, height, background-color, border-width;
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+            transition-delay: 500ms;
+        }
+
+        /*简写*/
+        /*transition: all 2s ease-in 500ms;*/
+        .base:hover {
+            width: 200px;
+            height: 200px;
+            background-color: #ff6666;
+            border-width: 10px;
+            border-color: #3a8ee6;
+        }
+    </style>
+</head>
+<body>
+<div class="base"></div>
+
+</body>
+</html>

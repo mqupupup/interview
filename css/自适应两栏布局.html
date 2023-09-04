@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自适应两栏布局</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .left-column {
+            width: 200px; /* 左侧列固定宽度 */
+            background-color: orange;
+            padding: 10px;
+        }
+
+        .right-column {
+            flex: 1; /* 右侧列自适应宽度 */
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left-column">
+        <!-- 左侧内容 -->
+        <h2>左侧栏</h2>
+        <p>左侧内容</p>
+    </div>
+    <div class="right-column">
+        <!-- 右侧内容 -->
+        <h2>右侧栏</h2>
+        <p>右侧内容</p>
+    </div>
+</div>
+</body>
+</html>
