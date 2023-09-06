@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- 通过相对定位、浮动和负边距等CSS属性和技巧，实现了一个具有三列布局、自适应宽度和前置主体内容的布局效果。   -->
+    <title>圣杯布局</title>
+    <style>
+      .container {
+        padding-left: 150px;
+        padding-right: 190px;
+      }
+      .main {
+        float: left;
+        width: 100%;
+        background: #ff6666;
+      }
+      .left {
+        float: left;
+        width: 190px;
+        margin-left: -100%;
+        position: relative;
+        left: -150px;
+        background: #0EA9FF;
+      }
+      .right {
+        float: left;
+        width: 190px;
+        margin-left: -190px;
+        position: relative;
+        right: -190px;
+        background: firebrick;
+      }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main">hahahahhhhhhhhh</div>
+    <div class="left">222</div>
+    <div class="right">444</div>
+  </div>
+
+</body>
+</html>
