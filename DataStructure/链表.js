@@ -135,7 +135,16 @@ const reverseList = function (head) {
     return pre;
 }
 
-let l12 = reverseList(l10,4);
+const reverseList1 = function (head) {
+
+    if(head == null || head.next == null) return head;
+    const p = reverseList1(head.next);
+    head.next.next = head;
+    head.next = null;
+    return p;
+}
+
+let l12 = reverseList1(l10,4);
 while(l12) {
     console.log('翻转链表',l12.val);
     l12 = l12.next;
@@ -166,4 +175,54 @@ const reverseBetween = function (head, m, n) {
     start.next=cur
     // dummy.next 永远指向链表头结点
     return dummy.next
+}
+
+const hasCycle = function (head) {
+    if(head === null) return false;
+    let slow = head;
+    let fast = head.next;
+    while(fast && fast.next) {
+        if(slow.next === fast.next) return true;
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    return  false;
+}
+const hasCycle1 = function (head) {
+    while(head) {
+        if(head.flag) {
+            return true;
+        }else {
+            console.log('head详情-----',head);
+            head.flag = true;
+            head = head.next;
+        }
+    }
+    return  false;
+}
+const node1 = new ListNode(1);
+const node2 = new ListNode(2);
+const node3 = new ListNode(3);
+const node4 = new ListNode(4);
+
+node1.next = node2;
+node2.next = node3;
+node3.next = node4;
+node4.next = node2;
+let test = hasCycle1(node1);
+console.log("判断是否有环---，",test);
+
+// 环形链表衍生问题——定位环的起点
+
+const detectCycle = function(head) {
+    while(head) {
+        if (head.flag){
+            return head;
+        }else {
+            head.flag = true;
+            head = head.next;
+        }
+    }
+    return null;
+
 }
